@@ -1,0 +1,23 @@
+%btn-start {
+  border: none;
+  border-radius: 28px;
+  padding: 1.5rem 4rem;
+  background-color: $primary-bright;
+  color: $pale-red;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: background-color 0.3s;
+  @media (hover: hover) {
+    &:hover {
+      color: #fff;
+      background-color: lighten(hsl(12, 88%, 59%), 20%);
+    }
+  }
+}
+@mixin respond($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}

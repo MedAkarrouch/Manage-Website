@@ -1,0 +1,87 @@
+.wrapper {
+  position: relative;
+  max-width: 150rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 55%;
+    transform: translate(14%, -20%);
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  @include respond($tab-port--1100) {
+    &::after {
+      transform: translate(14%, 0);
+    }
+  }
+  @include respond($tab-port) {
+    &::after {
+      transform: translate(19%, -34%);
+      background-position: center;
+      width: 100%;
+      display: none;
+    }
+  }
+  @include respond($phone-700) {
+    &::after {
+      // transform: translate(19%, -19%);
+    }
+  }
+}
+.hero {
+  overflow: hidden;
+  position: relative;
+  max-width: 130rem;
+  margin: 5rem auto 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__intro {
+    background-color: #fff;
+    margin-right: 6rem;
+    margin-top: 4rem;
+    @include respond($tab-port--1100) {
+      margin-right: 3rem;
+    }
+  }
+  &__hdg {
+    margin-bottom: 3rem;
+  }
+  &__prg {
+    color: $light-gray;
+    color: $grayish-blue;
+    max-width: 35rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+  }
+  &__btn {
+    @extend%btn-start;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+  @include respond($tab-port) {
+    text-align: center;
+    grid-template-columns: 1fr;
+    max-width: 70rem;
+    row-gap: 6rem;
+    &__prg {
+      margin: 0 auto;
+      margin-bottom: 4rem;
+      max-width: unset;
+    }
+    &__intro {
+      margin: 0;
+    }
+  }
+}

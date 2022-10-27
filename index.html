@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/sass/main.scss">
+  <script src="src/js/app.js" defer></script>
+  <title>Manage</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <img class="header__logo" src="src/images/logo.svg" alt="logo image">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="#">Pricing</a>
+          </li>
+          <li>
+            <a class="header__link" href="#">Product</a>
+          </li>
+          <li>
+            <a class="header__link" href="#">About Us</a>
+          </li>
+          <li>
+            <a class="header__link" href="#">Careers</a>
+          </li>
+          <li>
+            <a class="header__link" href="#">Community</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__cta">Get Started</button>
+      <div class="header__toggle-box">
+        <img class="btn--toggle" id="hamburger" src="src/images/icon-hamburger.svg" alt="">
+        <img class="btn--toggle" id="close" src="src/images/icon-close.svg" alt="">
+      </div>
+    </header>
+
+    <div class="hero">
+      <nav id="menu" class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Pricing</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Product</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">About Us</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Careers</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Community</a>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">Get Started</button>
+          </li>
+        </ul>
+      </nav>
+      <article class="hero__intro">
+        <h1 class="hdg-primary hero__hdg">Bring everyone together to build better products.</h1>
+        <p class="hero__prg">Manage makes it simple for software teams to plan day-to-day
+          tasks while keeping the larger team goals in view.</p>
+        <button class="hero__btn get-btn">
+          Get Started
+        </button>
+      </article>
+      <img class="hero__img" src="src/images/illustration-intro.svg" alt="hero image">
+    </div>
+
+  </div>
+
+  <main>
+    <section class="about">
+
+      <figure class="about__intro">
+        <h2 class="about__hdgs hdg-secondary">What’s different about Manage?</h2>
+        <p class="about__prg">Manage provides all the functionality your team needs, without
+          the complexity. Our software is tailor-made for modern digital
+          product teams. </p>
+      </figure>
+
+      <ul class="about__list">
+        <li class="about__item">
+          <div class="about__nbr">01</div>
+          <h3 class="about__hdgt hdg-tertiary">Track company-wide progress</h3>
+          <p class="about__prg"> See how your day-to-day tasks fit into the wider vision. Go from
+            tracking progress at the milestone level all the way done to the
+            smallest of details. Never lose sight of the bigger picture again.</p>
+        </li>
+        <li class="about__item">
+          <div class="about__nbr">02</div>
+          <h3 class="about__hdgt hdg-tertiary">Advanced built-in reports</h3>
+          <p class="about__prg">Set internal delivery estimates and track progress toward company
+            goals. Our customisable dashboard helps you build out the reports
+            you need to keep key stakeholders informed.</p>
+        </li>
+        <li class="about__item">
+          <div class="about__nbr">03</div>
+          <h3 class="about__hdgt hdg-tertiary">Everything you need in one place</h3>
+          <p class="about__prg">Stop jumping from one service to another to communicate, store files,
+            track tasks and share documents. Manage offers an all-in-one team
+            productivity solution.</p>
+        </li>
+      </ul>
+
+    </section>
+    <section class="testimonials" style="">
+
+      <div class="testimonials__container">
+
+        <h2 class="testimonials__hdg hdg-secondary">What they've said</h2>
+
+        <div class="testimonials__slider">
+          <button id="btn-left" class="testimonials__slider-btn testimonials__slider-btn--left "
+            data-move-to="-1">←</button>
+          <button id="btn-right" class="testimonials__slider-btn testimonials__slider-btn--right "
+            data-move-to="1">→</button>
+          <article class="testimonials__slide">
+            <img class="testimonials__img" src="src/images/avatar-anisha.png" alt="picture of a person">
+            <div class="testimonials__name">Anisha Li</div>
+            <blockquote class="testimonials__quote">“Manage has supercharged our team’s workflow. The ability to
+              maintain
+              visibility on larger milestones at all times keeps everyone motivated.”</blockquote>
+          </article>
+          <div class="testimonials__dots">
+            <button class="testimonials__dot testimonials__dot--active"></button>
+            <button class="testimonials__dot"></button>
+            <button class="testimonials__dot"></button>
+            <button class="testimonials__dot"></button>
+          </div>
+          <article class="testimonials__slide">
+            <img class="testimonials__img" src="src/images/avatar-ali.png" alt="picture of a person">
+            <div class="testimonials__name">Ali Bravo</div>
+            <blockquote class="testimonials__quote">“We have been able to cancel so many other subscriptions since using
+              Manage. There is no more cross-channel confusion and everyone is much
+              more focused.”</blockquote>
+          </article>
+          <article class="testimonials__slide">
+            <img class="testimonials__img" src="src/images/avatar-richard.png" alt="picture of a person">
+            <div class="testimonials__name">Richard Watts</div>
+            <blockquote class="testimonials__quote">“Manage allows us to provide structure and process. It keeps us
+              organized
+              and focused. I can’t stop recommending them to everyone I talk to!”</blockquote>
+          </article>
+          <article class="testimonials__slide">
+            <img class="testimonials__img" src="src/images/avatar-shanai.png" alt="picture of a person">
+            <div class="testimonials__name">Shanai Gough</div>
+            <blockquote class="testimonials__quote">“Their software allows us to track, manage and collaborate on our
+              projects
+              from anywhere. It keeps the whole team in-sync without being intrusive.”</blockquote>
+          </article>
+
+        </div>
+
+        <button class="testimonials__btn">Get Started</button>
+
+
+      </div>
+
+    </section>
+    <section class="cta" style="">
+      <div class="cta__container">
+
+        <div class="cta__hdg">Simplify how your team works today.</div>
+        <button class="cta__btn">Get Started</button>
+
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <img class="footer__logo" src="src/images/logoF.svg" alt="logo image">
+      <ul class="footer__list-icons">
+        <li class="footer__item-icon">
+          <a href="#" class="footer__link-icon">
+            <img src="src/images/icon-facebook.svg" alt="facebook icon">
+          </a>
+        </li>
+        <li class="footer__item-icon">
+          <a href="#" class="footer__link-icon">
+            <img src="src/images/icon-youtube.svg" alt="youtube icon">
+          </a>
+        </li>
+        <li class="footer__item-icon">
+          <a href="#" class="footer__link-icon">
+            <img src="src/images/icon-twitter.svg" alt="twitter icon">
+          </a>
+        </li>
+        <li class="footer__item-icon">
+          <a href="#" class="footer__link-icon">
+            <img src="src/images/icon-pinterest.svg" alt="printerest icon">
+          </a>
+        </li>
+        <li class="footer__item-icon">
+          <a href="#" class="footer__link-icon">
+            <img src="src/images/icon-instagram.svg" alt="instagram icon">
+          </a>
+        </li>
+      </ul>
+      <ul class="footer__list footer__list--f">
+        <li class="footer__item">
+          <a href="#" class="footer__link">Home</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Pricing</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Products</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">About Us</a>
+        </li>
+      </ul>
+      <ul class="footer__list footer__list--s">
+        <li class="footer__item">
+          <a href="#" class="footer__link">Carrers</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Community</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Privacy Policy</a>
+        </li>
+      </ul>
+      <form action="" class="footer__form">
+        <input class="footer__input" type="text" autocomplete="off" placeholder="Updates in your inbox...">
+        <button class="footer__btn">Go</button>
+      </form>
+      <p class="footer__copy">Copyright 2022.All Rights Reserved<ion-icon name="browsers-outline"></ion-icon>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

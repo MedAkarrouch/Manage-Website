@@ -1,0 +1,64 @@
+.header {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 3rem 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: block;
+    cursor: pointer;
+  }
+  &__nav {
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+  }
+  &__item {
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.1s;
+      font-weight: 500;
+    }
+    @media (hover: hover) {
+      &:hover {
+        color: $grayish-blue;
+      }
+    }
+    &:active {
+    }
+  }
+  &__cta {
+    @extend%btn-start;
+    padding: 1.35rem 3.5rem;
+  }
+  &__toggle-box {
+    display: none;
+    img {
+      cursor: pointer;
+    }
+    #close {
+      display: none;
+    }
+  }
+}
+// Applying media quieries
+.header {
+  @include respond($tab-port) {
+    align-items: start;
+    &__nav,
+    &__cta {
+      display: none;
+    }
+    &__toggle-box {
+      display: block;
+    }
+  }
+}

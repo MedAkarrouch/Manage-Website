@@ -1,0 +1,107 @@
+.testimonials {
+  padding: 4rem 1.2rem;
+  padding-bottom: 10rem;
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__hdg {
+    margin-bottom: 5rem;
+  }
+  &__btn {
+    @extend%btn-start;
+    margin-top: 5rem;
+  }
+  &__slider {
+    max-width: 75rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 35rem;
+  }
+  &__slide {
+    padding: 0 12rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+  }
+  &__img {
+    margin-bottom: 2rem;
+    height: 12rem;
+  }
+  &__name {
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  &__quote {
+    line-height: 1.5;
+    color: $grayish-blue;
+    font-size: 2rem;
+  }
+  &__slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 3rem;
+    border-radius: 50%;
+    color: #fff;
+    background-color: $primary-bright;
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    &--left {
+      top: 50%;
+      left: 0;
+    }
+    &--right {
+      top: 50%;
+      right: 0;
+    }
+  }
+  &__dots {
+    z-index: 99;
+    // margin-top: 5rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  &__dot {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: lighten(hsl(12, 88%, 59%), 10%);
+    background-color: $primary-bright;
+    opacity: 0.5;
+    border: none;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    &--active {
+      opacity: 1;
+    }
+  }
+  @include respond($phone) {
+    &__slide {
+      padding: 0 5rem;
+    }
+    &__slider-btn {
+      font-size: 2.5rem;
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  @include respond(25.375em) {
+    &__slider {
+      height: 38rem;
+    }
+  }
+}

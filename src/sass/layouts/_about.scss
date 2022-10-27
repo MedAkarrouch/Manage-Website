@@ -1,0 +1,80 @@
+.about {
+  max-width: 130rem;
+  margin: 0 auto;
+  // margin-bottom: 40rem;
+  margin-bottom: 5rem;
+
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 6rem;
+  &__intro {
+  }
+  &__hdgs {
+    margin-bottom: 3rem;
+  }
+  &__prg {
+    color: $grayish-blue;
+    max-width: 35rem;
+    line-height: 1.5;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 3rem;
+  }
+
+  &__item &__prg {
+    grid-column: 2/3;
+    max-width: unset;
+    margin-top: 1rem;
+  }
+  &__nbr {
+    background-color: $primary-bright;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    color: $pale-red;
+  }
+  &__hdgt {
+    grid-column: 2/3;
+    align-self: center;
+  }
+}
+.about {
+  @include respond($tab-port) {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    max-width: 70rem;
+    &__intro {
+      text-align: center;
+    }
+    &__list {
+      gap: 5rem;
+    }
+    &__prg {
+      max-width: unset;
+      margin: 0 auto;
+      // background-color: #fff;
+    }
+    &__hdgt {
+      justify-self: start;
+    }
+    &__item {
+      row-gap: 1rem;
+      // background-color: #ffe3e3;
+      // column-gap: 0;
+      // row-gap: 2rem;
+      // grid-template-columns: 1fr;
+    }
+    &__item &__prg {
+      grid-column: 1 / span 2;
+      max-width: 100%;
+    }
+  }
+}

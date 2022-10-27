@@ -1,0 +1,43 @@
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+  z-index: 9;
+  background-color: #fff;
+  transform: translateY(-150%);
+  transition: transform 0.3s;
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__item {
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $primary-blue;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+  }
+  &__btn {
+    margin-top: 2rem;
+    @extend%btn-start;
+  }
+}
+.wrapper.show-menu #close {
+  display: block;
+}
+.wrapper.show-menu #hamburger {
+  display: none;
+}
+.wrapper.show-menu #menu {
+  transform: translate(0);
+}

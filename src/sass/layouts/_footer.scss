@@ -1,0 +1,159 @@
+.footer {
+  background-color: $dark-blue;
+  // margin-bottom: 20rem;
+  padding: 6rem 0;
+  &__input-error {
+  }
+  &__container {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) min-content;
+  }
+  &__logo {
+    grid-column: 1/2;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  &__item {
+  }
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      color: $pale-red;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    @media (hover: hover) {
+      &:hover {
+        color: $primary-bright;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: 'Please Enter A Valid Email Address!';
+      left: 1rem;
+      top: 0;
+      // transform: translateY(5rem);
+      transform: translateY(-2rem);
+      font-style: italic;
+      color: $primary-bright;
+      font-size: 1.2rem;
+      position: absolute;
+      transition: transform 0.3s;
+    }
+  }
+  &__form--active {
+    &::after {
+      transform: translateY(5rem);
+    }
+    @include respond($tab-port) {
+      padding-bottom: 2rem;
+      &::after {
+        transform: translateY(6rem);
+      }
+    }
+  }
+  &__form--active &__input {
+    &::placeholder {
+      color: $primary-bright;
+    }
+    border: 2px solid $primary-bright;
+  }
+  &__input {
+    padding: 1.5rem 2.5rem;
+    border-radius: 28px;
+    border: none;
+    color: $primary-blue;
+    border: 2px solid transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__btn {
+    @extend%btn-start;
+    padding: 1.5rem 3rem;
+  }
+  &__copy {
+    font-size: 1.4rem;
+    color: $pale-red;
+    grid-row: 2/3;
+    grid-column: 4/5;
+    justify-self: end;
+  }
+  &__list-icons {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+  &__item-icon {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+  &__link-icon {
+    img {
+      display: block;
+    }
+  }
+}
+.footer {
+  @include respond($tab-port) {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 5rem;
+      justify-items: center;
+      max-width: 70rem;
+      column-gap: 18rem;
+    }
+    &__form {
+      grid-row: 1/2;
+      grid-column: 1/-1;
+    }
+    &__list {
+      &--f {
+        // grid-row: 2/3;
+        justify-self: end;
+        // grid-column: 1/2;
+      }
+      &--s {
+        // grid-column: 2/3;
+        justify-self: start;
+        // grid-row: 2/3;
+      }
+    }
+    &__list-icons {
+      grid-row: 3/4;
+      grid-column: 1/-1;
+    }
+    &__logo {
+      grid-row: 4/5;
+      grid-column: 1/-1;
+    }
+    &__copy {
+      grid-row: 5/6;
+      grid-column: 1/-1;
+      justify-self: center;
+    }
+  }
+  @include respond(21.875em) {
+    &__container {
+      column-gap: 12rem;
+    }
+  }
+}
